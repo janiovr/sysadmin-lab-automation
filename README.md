@@ -11,7 +11,7 @@ Real Junior SysAdmin/DevOps lab. Automates secure setup (SSH key-only, UFW firew
 1. Clone: `git clone https://github.com/janiovr/sysadmin-lab-automation.git`
 2. Run: `ansible-playbook playbooks/base-setup.yml && ansible-playbook playbooks/docker-lab.yml`
 
-Demo: [Ngrok link aqui]
+Demo: [https://deserticolous-superceremoniously-kaylynn.ngrok-free.dev]
 
 ![Docker PS](screenshots/docker-ps.png)
 ![UFW Status](screenshots/ufw.png)

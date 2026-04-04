@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Serviço Portainer para gerenciamento de containers Docker
+  portainer:
+    image: portainer/portainer-ce
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+  # Serviço Nginx servindo uma página personalizada
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./custom-page:/usr/share/nginx/html
+    restart: unless-stopped
+
+  # Instância do Dashboard CNC usando imagem nginx:alpine
+  cnc-dashboard:
+    image: nginx:alpine
+    ports:
+      - "8081:80"
+    volumes:
+      - ./cnc-dashboard:/usr/share/nginx/html
+    restart: unless-stopped

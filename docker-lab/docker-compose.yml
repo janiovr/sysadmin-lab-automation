@@ -1,29 +1,38 @@
-version: '3.8'
-
 services:
-  # Serviço Portainer para gerenciamento de containers Docker
+  nginx:
+    image: nginx:alpine
+    container_name: devops-lab-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/site:/usr/share/nginx/html:ro
+    networks:
+      - devops-net
+    restart: unless-stopped
+
   portainer:
-    image: portainer/portainer-ce
+    image: portainer/portainer-ce:latest
+    container_name: devops-lab-portainer
     ports:
       - "9000:9000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./portainer/data:/data
+    networks:
+      - devops-net
     restart: unless-stopped
 
-  # Serviço Nginx servindo uma página personalizada
-  nginx:
-    image: nginx:alpine
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: devops-lab-uptime-kuma
     ports:
-      - "8080:80"
+      - "3001:3001"
     volumes:
-      - ./custom-page:/usr/share/nginx/html
+      - ./uptime-kuma/data:/app/data
+    networks:
+      - devops-net
     restart: unless-stopped
 
-  # Instância do Dashboard CNC usando imagem nginx:alpine
-  cnc-dashboard:
-    image: nginx:alpine
-    ports:
-      - "8081:80"
-    volumes:
-      - ./cnc-dashboard:/usr/share/nginx/html
-    restart: unless-stopped
+networks:
+  devops-net:
+    driver: bridge

@@ -5,18 +5,20 @@
 ![Nginx](https://img.shields.io/badge/Nginx-Reverse_Proxy-009639?style=flat-square&logo=nginx&logoColor=white)
 ![Monitoring](https://img.shields.io/badge/Monitoring-Uptime_Kuma-5CDD8B?style=flat-square)
 ![HTTPS](https://img.shields.io/badge/HTTPS-Let's_Encrypt-003A70?style=flat-square&logo=letsencrypt&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Live-success?style=flat-square)
+![Cloud](https://img.shields.io/badge/Cloud-Oracle_VPS-blue?style=flat-square)
 
 A hands-on infrastructure lab built to simulate real-world **Linux SysAdmin / DevOps workflows** using **Docker**, **Nginx**, **reverse proxying**, **HTTPS**, and **service monitoring**.
 
-This project started as a local container lab and evolved into a lightweight **public cloud deployment** hosted on a VPS, with real monitoring, HTTPS, and service recovery testing.
+This project started as a local container lab and evolved into a lightweight **public cloud deployment** hosted on **Oracle Cloud**, with real monitoring, HTTPS, and service recovery testing.
 
 ---
 
 ## 🌐 Live Links
 
 - **Live Demo:** `https://janiosysadminlab.duckdns.org`
-- **Status Page / Monitoring:** `https://janiosysadminstatus.duckdns.org`
+- **Monitoring Dashboard:** `https://janiosysadminstatus.duckdns.org`
+
+> Note: the monitoring link currently points to the Uptime Kuma dashboard. A dedicated public status page can be added in a future iteration.
 
 ---
 
@@ -292,5 +294,5 @@ This lab was built to gain hands-on experience with **Linux infrastructure**, **
 
 ## 👨‍💻 Author
 
-**Jânio Vieira Rodrigues**  
+**Janio Vieira Rodrigues**  
 Linux • Docker • Nginx • Monitoring • Infrastructure

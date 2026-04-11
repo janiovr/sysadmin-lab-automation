@@ -1,0 +1,16 @@
+=== SysAdmin Health Check - VPS Oracle Cloud (Janio Lab) ===
+📅 Data/Hora: Sat Apr 11 21:04:39 UTC 2026
+🖥️ Uptime:  21:04:39 up 1 day, 11:36,  5 users,  load average: 0.00, 0.00, 0.00
+💾 Memória: Mem:           956Mi       333Mi       101Mi       0.0Ki       520Mi       462Mi
+📊 Disco: /dev/sda1        45G  6.7G   39G  15% /
+🐳 Docker Containers: NAMES         STATUS
+uptime-kuma   Up 7 hours (healthy)
+nginx-cloud   Up 7 hours
+🔥 Processos Top: USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  1.1 167836 10816 ?        Ss   Apr10   0:22 /lib/systemd/systemd --system --deserialize 37
+root           2  0.0  0.0      0     0 ?        S    Apr10   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    Apr10   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   Apr10   0:00 [kworker/R-rcu_g]
+🔒 Logs Recentes (SSH): Apr 11 21:01:58 instance-20260407-2009 systemd-logind[785]: New session 68 of user ubuntu.
+Apr 11 21:02:11 instance-20260407-2009 sshd[67866]: Connection reset by authenticating user root 2.57.122.194 port 54876 [preauth]
+Apr 11 21:04:00 instance-20260407-2009 sshd[67922]: Connection reset by authenticating user root 2.57.122.192 port 19222 [preauth]

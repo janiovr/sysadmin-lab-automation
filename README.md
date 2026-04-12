@@ -260,6 +260,38 @@ Start the local lab:
 - Optional private admin tooling
 - Expanded monitoring scenarios
 
+ ## 🚀 30-Day SysAdmin Challenge (Progresso Live)
+
+   ### Dia 1: Health Check VPS ✅ (Security Fix)
+   - **Script**: [health-check.sh](health-check.sh) – Uptime, memória, disco, Docker (sanitizado).
+   - **Lição Security**: Removidos logs SSH reais (IPs atacantes). Nunca commit `/var/log/*` público!
+   - **Comando**:
+```bash
+     cd ~/docker-projects/sysadmin-lab-automation
+     ./health-check.sh > health-report-safe.txt
+Output VPS real (12/04/2026):
+=== SysAdmin Health Check - VPS Oracle Cloud (Janio Lab) ===
+📅 Data/Hora: Sun Apr 12 19:52:44 UTC 2026
+🖥️ Uptime:  19:52:44 up 2 days, 10:24,  1 user,  load average: 0.00, 0.13, 0.10
+💾 Memória: Mem:           956Mi       330Mi        75Mi       0.0Ki       550Mi       451Mi
+📊 Disco: /dev/sda1        45G  6.7G   39G  15% /
+🐳 Docker Containers: NAMES         STATUS
+uptime-kuma   Up 30 hours (healthy)
+nginx-cloud   Up 30 hours
+🔥 Processos Top: USER PID COMMAND
+root 1 /lib/systemd/systemd
+root 2 [kthreadd]
+root 3 [pool_workqueue_release]
+root 4 [kworker/R-rcu_g]
+🔒 SSH Status: Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- File list:	/var/log/auth.log
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	1
+   `- Banned IP list:	
 ---
 
 ## 📚 Lessons Learned

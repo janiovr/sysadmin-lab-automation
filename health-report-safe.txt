@@ -1,0 +1,15 @@
+=== SysAdmin Health Check - VPS Oracle Cloud (Janio Lab) ===
+📅 Data/Hora: Sun Apr 12 08:23:30 AM EDT 2026
+🖥️ Uptime:  08:23:30 up 47 min,  1 user,  load average: 0.08, 0.05, 0.08
+💾 Memória: Mem:            23Gi       6.0Gi        15Gi       183Mi       3.0Gi        17Gi
+📊 Disco: /dev/sdb4        92G   18G   69G  21% /
+🐳 Docker Containers: NAMES                    STATUS
+devops-lab-nginx         Up 47 minutes
+devops-lab-portainer     Up 47 minutes
+devops-lab-uptime-kuma   Up 47 minutes (healthy)
+🔥 Processos Top: USER PID COMMAND
+root 1 /sbin/init
+root 2 [kthreadd]
+root 3 [pool_workqueue_release]
+root 4 [kworker/R-rcu_gp]
+🔒 SSH Status: Fail2ban não instalado

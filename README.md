@@ -269,6 +269,7 @@ Start the local lab:
 ```bash
      cd ~/docker-projects/sysadmin-lab-automation
      ./health-check.sh > health-report-safe.txt
+
 Output VPS real (12/04/2026):
 === SysAdmin Health Check - VPS Oracle Cloud (Janio Lab) ===
 📅 Data/Hora: Sun Apr 12 19:52:44 UTC 2026
@@ -293,7 +294,7 @@ root 4 [kworker/R-rcu_g]
    |- Total banned:	1
    `- Banned IP list:	
 
-### Dia 2: Non-Root User + Docker Cleanup ✅
+### Day 2: Non-Root User + Docker Cleanup ✅
 
 ![Docker df before cleanup](screenshots/day2/docker-df-before.png)
 ![Docker cleanup report](screenshots/day2/docker-cleanup-report.png)
@@ -304,44 +305,23 @@ root 4 [kworker/R-rcu_g]
 **Key Results**:
 - Script: [docker-cleanup.sh](./docker-cleanup.sh) (prune -a --volumes).
 - Non-root execution: `su - sysadmin -c "docker ps"` (works!).
-- Disk optimization: Images/Volumes reclaimed (e.g., 1.4GB saved or already optimized).
+- Disk optimization: Images/Volumes reclaimed (VPS already optimized).
 - Lab status: uptime-kuma/nginx-cloud healthy.
 
 **Commands**:
 ```bash
 ./docker-cleanup.sh  # Ubuntu (docker group)
-su - sysadmin -c "./docker-cleanup.sh"  # Full path if needed
+su - sysadmin -c "cd /home/ubuntu/docker-projects/sysadmin-lab-automation && ./docker-cleanup.sh"  # Full path📚 Lessons Learned
+
+Host reverse proxy (Nginx) for secure exposure.
+Non-root Docker operations.
+Real disk optimization & monitoring.
+Troubleshooting permissions & paths.
 
 ---
+🎯 Purpose
 
-## 📚 Lessons Learned
-
-This project helped reinforce practical concepts such as:
-
-- separating public exposure from internal container ports
-- using a host reverse proxy instead of exposing containers directly
-- troubleshooting DNS, routing, and firewall issues
-- validating HTTPS configuration in real cloud conditions
-- monitoring real service downtime and confirming recovery
-
----
-
-## 🛣️ Next Improvements
-
-Planned improvements for the next iterations:
-
-- refine firewall and access policies
-- improve documentation and deployment notes
-- add more monitoring scenarios
-- keep admin tooling private
-- expand the lab with additional lightweight services
-
----
-
-## 🎯 Purpose
-
-This lab was built to gain hands-on experience with **Linux infrastructure**, **public service exposure**, **monitoring**, and **troubleshooting** in preparation for **remote Junior Linux SysAdmin / Linux Support opportunities**.
-
+Hands-on Linux SysAdmin lab for remote Junior roles (Docker, Nginx, VPS).
 ---
 
 ## 👨‍💻 Author

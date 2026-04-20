@@ -292,6 +292,26 @@ root 4 [kworker/R-rcu_g]
    |- Currently banned:	0
    |- Total banned:	1
    `- Banned IP list:	
+
+### Dia 2: Non-Root User + Docker Cleanup ✅
+
+![Docker df before cleanup](screenshots/day2/docker-df-before.png)
+![Docker cleanup report](screenshots/day2/docker-cleanup-report.png)
+![Docker df after cleanup](screenshots/day2/docker-df-after.png)
+![Docker ps as sysadmin user](screenshots/day2/docker-ps-sysadmin.png)
+![Health check after cleanup](screenshots/day2/health-check-after-cleanup.png)
+
+**Key Results**:
+- Script: [docker-cleanup.sh](./docker-cleanup.sh) (prune -a --volumes).
+- Non-root execution: `su - sysadmin -c "docker ps"` (works!).
+- Disk optimization: Images/Volumes reclaimed (e.g., 1.4GB saved or already optimized).
+- Lab status: uptime-kuma/nginx-cloud healthy.
+
+**Commands**:
+```bash
+./docker-cleanup.sh  # Ubuntu (docker group)
+su - sysadmin -c "./docker-cleanup.sh"  # Full path if needed
+
 ---
 
 ## 📚 Lessons Learned

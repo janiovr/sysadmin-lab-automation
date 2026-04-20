@@ -1,0 +1,18 @@
+=== Docker Cleanup Dia 2 - Non-Root SysAdmin Lab ===
+Antes Cleanup:
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          2         2         510MB     510MB (100%)
+Containers      2         2         218.1kB   0B (0%)
+Local Volumes   1         1         4.623MB   0B (0%)
+Build Cache     0         0         0B        0B
+Total reclaimed space: 0B
+Total reclaimed space: 0B
+Depois Cleanup:
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          2         2         510MB     510MB (100%)
+Containers      2         2         218.1kB   0B (0%)
+Local Volumes   1         1         4.623MB   0B (0%)
+Build Cache     0         0         0B        0B
+Containers ativos: NAMES         STATUS
+uptime-kuma   Up 8 days (healthy)
+nginx-cloud   Up 8 days
